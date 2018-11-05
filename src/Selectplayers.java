@@ -1,5 +1,7 @@
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -7,6 +9,9 @@ import javax.swing.border.EmptyBorder;
 import javax.swing.GroupLayout;
 import javax.swing.GroupLayout.Alignment;
 import javax.swing.JButton;
+import javax.swing.LayoutStyle.ComponentPlacement;
+import javax.swing.JLabel;
+import java.awt.Color;
 
 public class Selectplayers extends JFrame {
 
@@ -35,30 +40,84 @@ public class Selectplayers extends JFrame {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
 		contentPane = new JPanel();
+		contentPane.setBackground(Color.GRAY);
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		
-		JButton btnPlayers = new JButton("5 PLayers");
+		JButton btnPlayers = new JButton("Heads");
+		btnPlayers.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent ae) {
+				
+				Inputplayers mn= new Inputplayers();
+			    
+				dispose();
+				mn.setVisible(true);
+				
+			}
+		});
+		JButton btnPlayers_1 = new JButton("Tails");
+		btnPlayers_1.addActionListener(new ActionListener() {
+		public void actionPerformed(ActionEvent ae) {
+			
+			Inputplayers mn= new Inputplayers();
+		    
+			dispose();
+			mn.setVisible(true);
+			
+		}
+	});
 		
-		JButton btnPlayers_1 = new JButton("11 Players");
+		JLabel lblTossTime = new JLabel("Toss time");
+		
+		JButton btnEnterTheMatch = new JButton("Enter the Match");
+		btnEnterTheMatch.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent ae) {
+				MainScore mn= new MainScore();
+				dispose();
+				mn.setVisible(true);
+				
+			}
+		});
+		
+		JLabel lblTeamPlease = new JLabel("Team 1 please choose");
+		
+	
 		GroupLayout gl_contentPane = new GroupLayout(contentPane);
 		gl_contentPane.setHorizontalGroup(
 			gl_contentPane.createParallelGroup(Alignment.LEADING)
-				.addGroup(gl_contentPane.createSequentialGroup()
-					.addGap(155)
+				.addGroup(Alignment.TRAILING, gl_contentPane.createSequentialGroup()
+					.addGap(34)
+					.addComponent(btnPlayers)
+					.addPreferredGap(ComponentPlacement.RELATED, 203, Short.MAX_VALUE)
+					.addComponent(btnPlayers_1)
+					.addGap(47))
+				.addGroup(Alignment.TRAILING, gl_contentPane.createSequentialGroup()
+					.addContainerGap(272, Short.MAX_VALUE)
+					.addComponent(lblTossTime)
+					.addGap(177))
+				.addGroup(Alignment.TRAILING, gl_contentPane.createSequentialGroup()
+					.addContainerGap(225, Short.MAX_VALUE)
 					.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
-						.addComponent(btnPlayers_1)
-						.addComponent(btnPlayers))
-					.addContainerGap(158, Short.MAX_VALUE))
+						.addComponent(btnEnterTheMatch)
+						.addComponent(lblTeamPlease))
+					.addGap(135))
 		);
 		gl_contentPane.setVerticalGroup(
 			gl_contentPane.createParallelGroup(Alignment.LEADING)
 				.addGroup(gl_contentPane.createSequentialGroup()
-					.addGap(39)
-					.addComponent(btnPlayers)
-					.addGap(38)
-					.addComponent(btnPlayers_1)
-					.addContainerGap(133, Short.MAX_VALUE))
+					.addContainerGap()
+					.addComponent(lblTossTime)
+					.addGap(18)
+					.addComponent(lblTeamPlease)
+					.addPreferredGap(ComponentPlacement.RELATED, 118, Short.MAX_VALUE)
+					.addComponent(btnEnterTheMatch)
+					.addGap(57))
+				.addGroup(gl_contentPane.createSequentialGroup()
+					.addGap(107)
+					.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
+						.addComponent(btnPlayers_1)
+						.addComponent(btnPlayers))
+					.addContainerGap(128, Short.MAX_VALUE))
 		);
 		contentPane.setLayout(gl_contentPane);
 	}

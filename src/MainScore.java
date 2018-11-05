@@ -26,7 +26,21 @@ public class MainScore extends JFrame{
 
 	String[] text = new String[20];
 	private JPanel contentPane;
-
+	private JLabel t1player5;
+	private JLabel t1player4;
+	private JLabel t1p4s;
+	private JLabel t1player3;
+	String score1;
+	private JLabel t1p5s;
+	private JLabel t1player2;
+	private JLabel t1player1;
+	private JLabel t2p1s;
+	private JLabel t2p3s;
+	private JLabel t2p4s;
+	private JLabel t2p2s;
+	private JLabel t2p5s;
+	private JLabel teamscore1;
+	private JLabel teamscore;
 	/**
 	 * Launch the application.
 	 */
@@ -48,6 +62,7 @@ public class MainScore extends JFrame{
 	 * Create the frame.
 	 */
 	public MainScore() {
+		String s = new score1(); 
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 1100, 600);
 		contentPane = new JPanel();
@@ -55,91 +70,91 @@ public class MainScore extends JFrame{
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		
+//		set s = new set();
 		
-		
-		JLabel lblNewLabel = new JLabel("New label");
+		t1player1 = new JLabel("New label");
 		//System.out.println(s);
-		lblNewLabel.setText(text[0]);
+//		lblNewLabel.setText(text[0]);
 		
-		JLabel lblNewLabel_1 = new JLabel("New label");
-		lblNewLabel_1.setText(text[1]);
+		t1player2 = new JLabel("New label");
+//		lblNewLabel_1.setText(text[1]);
 		
-		JLabel lblNewLabel_2 = new JLabel("New label");
-		lblNewLabel_2.setText(text[2]);
+		t1player3 = new JLabel("New label");
+//		lblNewLabel_2.setText(text[2]);
 		
 		JLabel lblNewLabel_3 = new JLabel("New label");
 		lblNewLabel_3.setText(text[3]);
 		
-		JLabel lblNewLabel_4 = new JLabel("New label");
-		lblNewLabel_4.setText(text[4]);
+		t1player4 = new JLabel("New label");
+//		lblNewLabel_4.setText(text[4]);
 		
-		JLabel lblNewLabel_5 = new JLabel("New label");
-		lblNewLabel_5.setText(text[5]);
+		t1player5 = new JLabel("New label");
+//		lblNewLabel_5.setText(text[5]);
 		
-		JLabel lblNewLabel_7 = new JLabel("New label");
-		lblNewLabel_7.setText(text[6]);
+		JLabel t2player5 = new JLabel("New label");
+//		lblNewLabel_7.setText(text[6]);
 		
-		JLabel lblNewLabel_6 = new JLabel("New label");
-		lblNewLabel_6.setText(text[7]);
+		JLabel t2player4 = new JLabel("New label");
+//		lblNewLabel_6.setText(text[7]);
 		
-		JLabel lblNewLabel_8 = new JLabel("New label");
-		lblNewLabel_8.setText(text[8]);
+		JLabel t2player3 = new JLabel("New label");
+//		lblNewLabel_8.setText(text[8]);
 		
-		JLabel lblNewLabel_9 = new JLabel("New label");
-		lblNewLabel_9.setText(text[9]);
+		JLabel t2player1 = new JLabel("New label");
+//		lblNewLabel_9.setText(text[9]);
 		
-		JLabel lblNewLabel_10 = new JLabel("New label");
-		lblNewLabel_10.setText(text[10]);
-		
-		JLabel lblNewLabel_11 = new JLabel("New label");
-		lblNewLabel_11.setText(text[11]);
-		
-		JLabel lblNewLabel_12 = new JLabel("New label");
-		lblNewLabel_12.setText(text[12]);
-		
-		JLabel lblNewLabel_13 = new JLabel("New label");
-		lblNewLabel_13.setText(text[13]);
-		
-		JLabel lblNewLabel_14 = new JLabel("New label");
-		lblNewLabel_14.setText(text[14]);
-		
-		JLabel lblNewLabel_15 = new JLabel("New label");
-		lblNewLabel_15.setText(text[15]);
-		
-		JLabel lblNewLabel_16 = new JLabel("New label");
-		lblNewLabel_16.setText(text[16]);
-		
-		JLabel lblNewLabel_17 = new JLabel("New label");
-		lblNewLabel_17.setText(text[17]);
-		
-		JLabel lblNewLabel_18 = new JLabel("New label");
-		lblNewLabel_18.setText(text[18]);
-		
-		JLabel lblNewLabel_19 = new JLabel("New label");
-		lblNewLabel_19.setText(text[19]);
+		JLabel t2player2 = new JLabel("New label");
+//		lblNewLabel_19.setText(text[19]);
 		System.out.println(text[19]);
 		
-		JButton button = new JButton("1");
-		
-		JButton button_1 = new JButton("2");
-		button_1.addActionListener(new ActionListener() {
+		JButton runs1 = new JButton("1");
+		runs1.addActionListener(new ActionListener() {
+			@SuppressWarnings("deprecation")
 			public void actionPerformed(ActionEvent e) {
+				 score1+=Integer.parseUnsignedInt(runs1.getLabel().toString());
+				 teamscore.setText(score1);
 			}
 		});
 		
-		JButton button_2 = new JButton("3");
-		
-		JButton button_3 = new JButton("4");
-		button_3.addActionListener(new ActionListener() {
+		JButton runs2 = new JButton("2");
+		runs2.addActionListener(new ActionListener() {
+			@SuppressWarnings("deprecation")
 			public void actionPerformed(ActionEvent e) {
+				score1+=Integer.parseUnsignedInt(runs2.getLabel().toString());
+				teamscore.setText(score1);
 			}
 		});
 		
-		JButton button_4 = new JButton("6");
+		JButton runs3 = new JButton("3");
+		runs3.addActionListener(new ActionListener() {
+			@SuppressWarnings("deprecation")
+			public void actionPerformed(ActionEvent e) {
+				score1+=Integer.parseUnsignedInt(runs3.getLabel().toString());
+				teamscore.setText(score1);
+			}
+		});
 		
-		JButton button_5 = new JButton("0");
+		JButton runs4 = new JButton("4");
+		runs4.addActionListener(new ActionListener() {
+			@SuppressWarnings("deprecation")
+			public void actionPerformed(ActionEvent e) {
+				score1+=Integer.parseUnsignedInt(runs4.getLabel().toString());
+				teamscore.setText(score1);
+			}
+		});
 		
-		JRadioButton rdbtnWide = new JRadioButton("Wide");
+		JButton runs6 = new JButton("6");
+		runs6.addActionListener(new ActionListener() {
+			@SuppressWarnings("deprecation")
+			public void actionPerformed(ActionEvent e) {
+				score1+=Integer.parseUnsignedInt(runs6.getLabel().toString());
+				teamscore.setText(score1);
+			}
+		});
+		
+		JButton runs0 = new JButton("0");
+		
+		JRadioButton wide1 = new JRadioButton("Wide");
 		
 		JLabel lblTeam = new JLabel("Team 1");
 		
@@ -149,107 +164,86 @@ public class MainScore extends JFrame{
 		
 		JRadioButton rdbtnByes = new JRadioButton("Byes");
 		
-		JRadioButton rdbtnNewRadioButton = new JRadioButton("Wide");
+		JRadioButton wide2 = new JRadioButton("Wide");
 		
-		JRadioButton rdbtnNewRadioButton_1 = new JRadioButton("No Ball");
+		JRadioButton noball2 = new JRadioButton("No Ball");
 		
-		JRadioButton rdbtnNewRadioButton_2 = new JRadioButton("Byes");
+		JRadioButton byes2 = new JRadioButton("Byes");
 		
-		JButton btnNewButton = new JButton("Blowed");
+		JButton blowed = new JButton("Blowed");
 		
-		JButton btnLbw = new JButton("LBW");
-		btnLbw.addActionListener(new ActionListener() {
+		JButton lbw = new JButton("LBW");
+		lbw.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 			}
 		});
 		
-		JButton btnRunOut = new JButton("Run Out");
+		JButton runout = new JButton("Run Out");
 		
-		JLabel lblNewLabel_20 = new JLabel("New label");
+		JLabel t1p1s = new JLabel("New label");
 		
-		JLabel lblNewLabel_21 = new JLabel("New label");
+		JLabel t1p2s = new JLabel("New label");
 		
-		JLabel lblNewLabel_22 = new JLabel("New label");
+		JLabel t1p3s = new JLabel("New label");
 		
-		JLabel lblNewLabel_23 = new JLabel("New label");
+		t1p4s = new JLabel("New label");
 		
-		JLabel lblNewLabel_24 = new JLabel("New label");
+		t1p5s = new JLabel("New label");
 		
-		JLabel label = new JLabel("New label");
+		t2p1s = new JLabel("New label");
 		
-		JLabel label_1 = new JLabel("New label");
+		t2p2s = new JLabel("New label");
 		
-		JLabel label_2 = new JLabel("New label");
+		t2p3s = new JLabel("New label");
 		
-		JLabel label_3 = new JLabel("New label");
+		t2p4s = new JLabel("New label");
 		
-		JLabel label_4 = new JLabel("New label");
+		t2p5s = new JLabel("New label");
 		
-		JLabel label_5 = new JLabel("New label");
+		teamscore1 = new JLabel("Team Score ");
+		teamscore1.setFont(new Font("DejaVu Sans Condensed", Font.ITALIC, 14));
+		teamscore1.setBackground(Color.BLACK);
+		teamscore1.setForeground(Color.BLUE);
 		
-		JLabel label_6 = new JLabel("New label");
+		teamscore = new JLabel("New label");
 		
-		JLabel label_7 = new JLabel("New label");
+		JLabel teamscore2 = new JLabel("Team score");
 		
-		JLabel label_8 = new JLabel("New label");
-		
-		JLabel label_9 = new JLabel("New label");
-		
-		JLabel label_10 = new JLabel("New label");
-		
-		JLabel label_11 = new JLabel("New label");
-		
-		JLabel label_12 = new JLabel("New label");
-		
-		JLabel label_13 = new JLabel("New label");
-		
-		JLabel label_14 = new JLabel("New label");
-		
-		JLabel lblTeam_2 = new JLabel("Team Score ");
-		lblTeam_2.setFont(new Font("DejaVu Sans Condensed", Font.ITALIC, 14));
-		lblTeam_2.setBackground(Color.BLACK);
-		lblTeam_2.setForeground(Color.BLUE);
-		
-		JLabel lblNewLabel_25 = new JLabel("New label");
+		JLabel lblNewLabel = new JLabel("New label");
 		GroupLayout gl_contentPane = new GroupLayout(contentPane);
 		gl_contentPane.setHorizontalGroup(
 			gl_contentPane.createParallelGroup(Alignment.LEADING)
 				.addGroup(gl_contentPane.createSequentialGroup()
 					.addGap(29)
 					.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
-						.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
-							.addComponent(lblNewLabel_3)
-							.addComponent(lblTeam, Alignment.TRAILING)
-							.addComponent(lblNewLabel_2)
-							.addComponent(lblNewLabel_1)
-							.addComponent(lblNewLabel)
-							.addComponent(lblNewLabel_5)
-							.addComponent(lblNewLabel_12)
-							.addComponent(lblNewLabel_13)
-							.addComponent(lblNewLabel_17))
-						.addComponent(lblNewLabel_18)
-						.addComponent(lblNewLabel_4))
-					.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING, false)
-						.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
-							.addGroup(gl_contentPane.createSequentialGroup()
-								.addPreferredGap(ComponentPlacement.UNRELATED)
-								.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING, false)
-									.addComponent(lblNewLabel_21, 0, 0, Short.MAX_VALUE)
-									.addComponent(lblNewLabel_20, GroupLayout.PREFERRED_SIZE, 27, Short.MAX_VALUE)))
-							.addGroup(Alignment.TRAILING, gl_contentPane.createSequentialGroup()
-								.addGap(13)
-								.addComponent(lblNewLabel_22, GroupLayout.PREFERRED_SIZE, 26, GroupLayout.PREFERRED_SIZE)))
 						.addGroup(gl_contentPane.createSequentialGroup()
-							.addPreferredGap(ComponentPlacement.UNRELATED)
+							.addComponent(t1player5)
+							.addGap(31)
+							.addComponent(t1p5s, GroupLayout.PREFERRED_SIZE, 28, GroupLayout.PREFERRED_SIZE))
+						.addGroup(gl_contentPane.createSequentialGroup()
 							.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
-								.addComponent(lblNewLabel_24, GroupLayout.PREFERRED_SIZE, 28, GroupLayout.PREFERRED_SIZE)
-								.addComponent(lblNewLabel_23, 0, 0, Short.MAX_VALUE)
-								.addComponent(label, GroupLayout.PREFERRED_SIZE, 28, GroupLayout.PREFERRED_SIZE)
-								.addComponent(label_1, GroupLayout.PREFERRED_SIZE, 28, GroupLayout.PREFERRED_SIZE)
-								.addComponent(label_2, GroupLayout.PREFERRED_SIZE, 28, GroupLayout.PREFERRED_SIZE)
-								.addComponent(label_3, GroupLayout.PREFERRED_SIZE, 28, GroupLayout.PREFERRED_SIZE)
-								.addComponent(label_4, GroupLayout.PREFERRED_SIZE, 28, GroupLayout.PREFERRED_SIZE))))
-					.addGap(67)
+								.addComponent(t1player4)
+								.addGroup(gl_contentPane.createParallelGroup(Alignment.TRAILING)
+									.addGroup(gl_contentPane.createSequentialGroup()
+										.addGroup(gl_contentPane.createParallelGroup(Alignment.TRAILING)
+											.addComponent(t1player2)
+											.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
+												.addComponent(lblNewLabel_3)
+												.addComponent(lblTeam, Alignment.TRAILING))
+											.addComponent(t1player3))
+										.addPreferredGap(ComponentPlacement.UNRELATED))
+									.addGroup(gl_contentPane.createSequentialGroup()
+										.addComponent(t1player1)
+										.addGap(3))))
+							.addGap(18)
+							.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
+								.addGroup(gl_contentPane.createParallelGroup(Alignment.TRAILING)
+									.addComponent(t1p4s, 0, 0, Short.MAX_VALUE)
+									.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
+										.addComponent(t1p2s, GroupLayout.PREFERRED_SIZE, 39, GroupLayout.PREFERRED_SIZE)
+										.addComponent(t1p3s, GroupLayout.PREFERRED_SIZE, 26, GroupLayout.PREFERRED_SIZE)))
+								.addComponent(t1p1s, GroupLayout.PREFERRED_SIZE, 27, GroupLayout.PREFERRED_SIZE))))
+					.addGap(45)
 					.addGroup(gl_contentPane.createParallelGroup(Alignment.TRAILING)
 						.addGroup(gl_contentPane.createSequentialGroup()
 							.addComponent(lblTeam_1)
@@ -257,233 +251,189 @@ public class MainScore extends JFrame{
 						.addGroup(gl_contentPane.createSequentialGroup()
 							.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
 								.addGroup(gl_contentPane.createSequentialGroup()
-									.addGroup(gl_contentPane.createParallelGroup(Alignment.TRAILING)
-										.addGroup(gl_contentPane.createSequentialGroup()
-											.addComponent(rdbtnWide)
-											.addGap(35))
-										.addGroup(gl_contentPane.createSequentialGroup()
-											.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
-												.addComponent(rdbtnByes)
-												.addComponent(rdbtnNoBall))
-											.addGap(18)))
-									.addGroup(gl_contentPane.createParallelGroup(Alignment.TRAILING)
-										.addComponent(button_5)
-										.addComponent(button_2))
-									.addGap(12)
 									.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
 										.addGroup(gl_contentPane.createSequentialGroup()
-											.addComponent(button)
-											.addPreferredGap(ComponentPlacement.UNRELATED)
-											.addComponent(button_1))
+											.addGroup(gl_contentPane.createParallelGroup(Alignment.TRAILING)
+												.addGroup(gl_contentPane.createSequentialGroup()
+													.addComponent(wide1)
+													.addGap(35))
+												.addGroup(gl_contentPane.createSequentialGroup()
+													.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
+														.addComponent(rdbtnNoBall)
+														.addComponent(rdbtnByes))
+													.addGap(18)))
+											.addGroup(gl_contentPane.createParallelGroup(Alignment.TRAILING)
+												.addComponent(runs0)
+												.addComponent(runs3))
+											.addGap(12)
+											.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
+												.addGroup(gl_contentPane.createSequentialGroup()
+													.addComponent(runs1)
+													.addPreferredGap(ComponentPlacement.UNRELATED)
+													.addComponent(runs2))
+												.addGroup(gl_contentPane.createSequentialGroup()
+													.addComponent(runs4)
+													.addPreferredGap(ComponentPlacement.UNRELATED)
+													.addComponent(runs6))))
 										.addGroup(gl_contentPane.createSequentialGroup()
-											.addComponent(button_3)
-											.addPreferredGap(ComponentPlacement.UNRELATED)
-											.addComponent(button_4))))
-								.addGroup(gl_contentPane.createSequentialGroup()
-									.addGap(158)
-									.addGroup(gl_contentPane.createParallelGroup(Alignment.TRAILING, false)
-										.addComponent(btnNewButton, Alignment.LEADING)
-										.addComponent(btnRunOut, Alignment.LEADING, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-										.addComponent(btnLbw, Alignment.LEADING, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-							.addPreferredGap(ComponentPlacement.RELATED, 91, Short.MAX_VALUE)
-							.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
-								.addGroup(gl_contentPane.createParallelGroup(Alignment.TRAILING)
-									.addComponent(rdbtnNewRadioButton_1)
-									.addGroup(gl_contentPane.createSequentialGroup()
-										.addComponent(rdbtnNewRadioButton)
-										.addGap(13)))
-								.addComponent(rdbtnNewRadioButton_2))
-							.addPreferredGap(ComponentPlacement.RELATED, 243, Short.MAX_VALUE)
-							.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
-								.addGroup(Alignment.TRAILING, gl_contentPane.createSequentialGroup()
+											.addGap(158)
+											.addGroup(gl_contentPane.createParallelGroup(Alignment.TRAILING, false)
+												.addComponent(blowed, Alignment.LEADING)
+												.addComponent(runout, Alignment.LEADING, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+												.addComponent(lbw, Alignment.LEADING, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+									.addPreferredGap(ComponentPlacement.RELATED, 75, Short.MAX_VALUE)
 									.addGroup(gl_contentPane.createParallelGroup(Alignment.TRAILING)
-										.addComponent(label_6, GroupLayout.PREFERRED_SIZE, 28, GroupLayout.PREFERRED_SIZE)
-										.addComponent(label_5, GroupLayout.PREFERRED_SIZE, 28, GroupLayout.PREFERRED_SIZE)
-										.addComponent(label_8, GroupLayout.PREFERRED_SIZE, 28, GroupLayout.PREFERRED_SIZE)
-										.addComponent(label_7, GroupLayout.PREFERRED_SIZE, 28, GroupLayout.PREFERRED_SIZE))
-									.addGap(18))
-								.addGroup(Alignment.TRAILING, gl_contentPane.createSequentialGroup()
-									.addGroup(gl_contentPane.createParallelGroup(Alignment.TRAILING)
-										.addComponent(label_13, GroupLayout.PREFERRED_SIZE, 28, GroupLayout.PREFERRED_SIZE)
-										.addComponent(label_14, GroupLayout.PREFERRED_SIZE, 28, GroupLayout.PREFERRED_SIZE)
-										.addComponent(label_12, GroupLayout.PREFERRED_SIZE, 28, GroupLayout.PREFERRED_SIZE)
-										.addComponent(label_11, GroupLayout.PREFERRED_SIZE, 28, GroupLayout.PREFERRED_SIZE)
-										.addComponent(label_10, GroupLayout.PREFERRED_SIZE, 28, GroupLayout.PREFERRED_SIZE)
-										.addComponent(label_9, GroupLayout.PREFERRED_SIZE, 28, GroupLayout.PREFERRED_SIZE))
-									.addGap(26)))
+										.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
+											.addGroup(gl_contentPane.createParallelGroup(Alignment.TRAILING)
+												.addComponent(noball2)
+												.addGroup(gl_contentPane.createSequentialGroup()
+													.addComponent(wide2)
+													.addGap(13)))
+											.addGroup(gl_contentPane.createSequentialGroup()
+												.addComponent(byes2)
+												.addGap(259)
+												.addComponent(t2p1s, GroupLayout.PREFERRED_SIZE, 28, GroupLayout.PREFERRED_SIZE)))
+										.addComponent(t2p4s, GroupLayout.PREFERRED_SIZE, 28, GroupLayout.PREFERRED_SIZE)
+										.addComponent(t2p3s, GroupLayout.PREFERRED_SIZE, 28, GroupLayout.PREFERRED_SIZE)
+										.addComponent(t2p2s, GroupLayout.PREFERRED_SIZE, 28, GroupLayout.PREFERRED_SIZE)))
+								.addComponent(t2p5s, Alignment.TRAILING, GroupLayout.PREFERRED_SIZE, 28, GroupLayout.PREFERRED_SIZE))
+							.addGap(42)
 							.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
-								.addComponent(lblNewLabel_10)
-								.addComponent(lblNewLabel_9)
-								.addComponent(lblNewLabel_8)
-								.addComponent(lblNewLabel_6)
-								.addComponent(lblNewLabel_7)
-								.addComponent(lblNewLabel_11)
-								.addComponent(lblNewLabel_14)
-								.addComponent(lblNewLabel_15)
-								.addComponent(lblNewLabel_19)
-								.addComponent(lblNewLabel_16))
+								.addComponent(t2player5)
+								.addComponent(t2player4)
+								.addComponent(t2player3)
+								.addComponent(t2player2)
+								.addComponent(t2player1))
 							.addGap(103))))
 				.addGroup(gl_contentPane.createSequentialGroup()
-					.addGap(238)
-					.addComponent(lblTeam_2, GroupLayout.PREFERRED_SIZE, 96, GroupLayout.PREFERRED_SIZE)
-					.addPreferredGap(ComponentPlacement.RELATED)
-					.addComponent(lblNewLabel_25)
-					.addContainerGap(696, Short.MAX_VALUE))
+					.addGap(21)
+					.addComponent(teamscore1, GroupLayout.PREFERRED_SIZE, 96, GroupLayout.PREFERRED_SIZE)
+					.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
+						.addGroup(gl_contentPane.createSequentialGroup()
+							.addGap(18)
+							.addComponent(teamscore)
+							.addContainerGap(885, Short.MAX_VALUE))
+						.addGroup(Alignment.TRAILING, gl_contentPane.createSequentialGroup()
+							.addPreferredGap(ComponentPlacement.RELATED)
+							.addComponent(teamscore2)
+							.addGap(50)
+							.addComponent(lblNewLabel)
+							.addGap(114))))
 		);
 		gl_contentPane.setVerticalGroup(
 			gl_contentPane.createParallelGroup(Alignment.LEADING)
 				.addGroup(gl_contentPane.createSequentialGroup()
 					.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
 						.addGroup(gl_contentPane.createSequentialGroup()
+							.addContainerGap()
 							.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
 								.addGroup(gl_contentPane.createSequentialGroup()
-									.addContainerGap()
-									.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
-										.addGroup(gl_contentPane.createSequentialGroup()
-											.addGap(17)
-											.addComponent(rdbtnNewRadioButton))
-										.addGroup(gl_contentPane.createSequentialGroup()
-											.addGap(15)
-											.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
-												.addComponent(button_5)
-												.addComponent(button_1)
-												.addComponent(button)
-												.addComponent(rdbtnWide)))
-										.addGroup(gl_contentPane.createSequentialGroup()
-											.addComponent(lblTeam)
-											.addPreferredGap(ComponentPlacement.UNRELATED)
-											.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
-												.addComponent(lblNewLabel)
-												.addComponent(lblNewLabel_20))))
-									.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
-										.addGroup(gl_contentPane.createSequentialGroup()
-											.addGap(18)
-											.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
-												.addGroup(gl_contentPane.createSequentialGroup()
-													.addComponent(rdbtnNewRadioButton_1)
-													.addPreferredGap(ComponentPlacement.UNRELATED)
-													.addComponent(rdbtnNewRadioButton_2)
-													.addGap(7)
-													.addComponent(label_9))
-												.addGroup(gl_contentPane.createSequentialGroup()
-													.addGap(4)
-													.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
-														.addComponent(lblNewLabel_1)
-														.addComponent(lblNewLabel_21))
-													.addPreferredGap(ComponentPlacement.RELATED)
-													.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
-														.addGroup(gl_contentPane.createSequentialGroup()
-															.addComponent(lblNewLabel_2)
-															.addGap(7)
-															.addComponent(lblNewLabel_3)
-															.addPreferredGap(ComponentPlacement.RELATED)
-															.addComponent(lblNewLabel_4)
-															.addGap(24)
-															.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
-																.addComponent(lblNewLabel_5)
-																.addComponent(label))
-															.addPreferredGap(ComponentPlacement.UNRELATED)
-															.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
-																.addComponent(lblNewLabel_12)
-																.addComponent(label_1))
-															.addPreferredGap(ComponentPlacement.UNRELATED)
-															.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
-																.addComponent(lblNewLabel_13)
-																.addComponent(label_2))
-															.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
-																.addGroup(gl_contentPane.createSequentialGroup()
-																	.addGap(18)
-																	.addComponent(lblNewLabel_17))
-																.addGroup(gl_contentPane.createSequentialGroup()
-																	.addPreferredGap(ComponentPlacement.RELATED)
-																	.addComponent(label_3))))
-														.addGroup(gl_contentPane.createSequentialGroup()
-															.addComponent(lblNewLabel_22)
-															.addGap(10)
-															.addComponent(lblNewLabel_23)
-															.addPreferredGap(ComponentPlacement.RELATED)
-															.addComponent(lblNewLabel_24)))))
-											.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
-												.addGroup(gl_contentPane.createSequentialGroup()
-													.addGap(18)
-													.addComponent(lblNewLabel_18))
-												.addGroup(gl_contentPane.createSequentialGroup()
-													.addGap(18)
-													.addComponent(label_4))))
-										.addGroup(gl_contentPane.createSequentialGroup()
-											.addGap(22)
-											.addComponent(rdbtnByes))))
+									.addGap(17)
+									.addComponent(wide2))
 								.addGroup(gl_contentPane.createSequentialGroup()
-									.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
-										.addGroup(gl_contentPane.createSequentialGroup()
-											.addComponent(lblTeam_1)
-											.addPreferredGap(ComponentPlacement.UNRELATED)
-											.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
-												.addComponent(lblNewLabel_9)
-												.addComponent(label_5))
-											.addPreferredGap(ComponentPlacement.RELATED)
-											.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
-												.addComponent(lblNewLabel_10)
-												.addComponent(label_6))
-											.addPreferredGap(ComponentPlacement.RELATED)
-											.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
-												.addComponent(lblNewLabel_8)
-												.addComponent(label_7))
-											.addGap(12)
-											.addGroup(gl_contentPane.createParallelGroup(Alignment.TRAILING)
-												.addComponent(lblNewLabel_6)
-												.addGroup(gl_contentPane.createSequentialGroup()
-													.addComponent(label_8)
-													.addGap(6))))
-										.addGroup(gl_contentPane.createSequentialGroup()
-											.addGap(58)
-											.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
-												.addComponent(button_3)
-												.addComponent(button_4)
-												.addComponent(button_2))))
+									.addGap(15)
+									.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
+										.addComponent(runs0)
+										.addComponent(runs2)
+										.addComponent(runs1)
+										.addComponent(wide1)))
+								.addComponent(lblTeam))
+							.addGap(2)
+							.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
+								.addGroup(gl_contentPane.createSequentialGroup()
 									.addGap(18)
 									.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
 										.addGroup(gl_contentPane.createSequentialGroup()
-											.addComponent(btnNewButton)
-											.addGap(18)
-											.addComponent(btnLbw)
-											.addPreferredGap(ComponentPlacement.RELATED)
-											.addComponent(btnRunOut))
+											.addGroup(gl_contentPane.createParallelGroup(Alignment.TRAILING)
+												.addGroup(gl_contentPane.createSequentialGroup()
+													.addComponent(noball2)
+													.addPreferredGap(ComponentPlacement.UNRELATED)
+													.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
+														.addComponent(byes2)
+														.addComponent(t1p2s, GroupLayout.PREFERRED_SIZE, 19, GroupLayout.PREFERRED_SIZE))
+													.addGap(7))
+												.addGroup(gl_contentPane.createSequentialGroup()
+													.addComponent(t2p1s)
+													.addGap(18)))
+											.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
+												.addComponent(t2player2)
+												.addComponent(t2p2s)))
 										.addGroup(gl_contentPane.createSequentialGroup()
-											.addComponent(lblNewLabel_7)
-											.addGap(18)
+											.addGap(4)
 											.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
-												.addComponent(lblNewLabel_11)
-												.addComponent(label_10))
-											.addPreferredGap(ComponentPlacement.UNRELATED)
-											.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
-												.addComponent(lblNewLabel_14)
-												.addComponent(label_11))
-											.addGap(18)
-											.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
-												.addComponent(lblNewLabel_15)
-												.addComponent(label_12))
+												.addComponent(t1player1)
+												.addComponent(t1p1s))
+											.addPreferredGap(ComponentPlacement.RELATED)
 											.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
 												.addGroup(gl_contentPane.createSequentialGroup()
-													.addGap(18)
-													.addComponent(lblNewLabel_19))
+													.addGap(22)
+													.addComponent(lblNewLabel_3)
+													.addGap(42)
+													.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
+														.addComponent(t1player3)
+														.addComponent(t1p3s)))
 												.addGroup(gl_contentPane.createSequentialGroup()
-													.addPreferredGap(ComponentPlacement.UNRELATED)
-													.addComponent(label_13)))
-											.addPreferredGap(ComponentPlacement.RELATED)
-											.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
-												.addComponent(lblNewLabel_16)
-												.addComponent(label_14))))))
-							.addPreferredGap(ComponentPlacement.RELATED, 36, Short.MAX_VALUE))
+													.addGap(25)
+													.addComponent(t1player2))))))
+								.addGroup(gl_contentPane.createSequentialGroup()
+									.addGap(22)
+									.addComponent(rdbtnByes)
+									.addPreferredGap(ComponentPlacement.UNRELATED)
+									.addComponent(rdbtnNoBall)))
+							.addGap(22)
+							.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
+								.addComponent(t1player4)
+								.addComponent(t1p4s))
+							.addGap(38)
+							.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
+								.addComponent(t1player5)
+								.addComponent(t1p5s))
+							.addGap(62))
 						.addGroup(gl_contentPane.createSequentialGroup()
-							.addContainerGap(53, Short.MAX_VALUE)
-							.addComponent(rdbtnNoBall)
-							.addGap(274)))
+							.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
+								.addGroup(gl_contentPane.createSequentialGroup()
+									.addComponent(lblTeam_1)
+									.addGap(81)
+									.addComponent(t2player1))
+								.addGroup(gl_contentPane.createSequentialGroup()
+									.addGap(58)
+									.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
+										.addComponent(runs4)
+										.addComponent(runs6)
+										.addComponent(runs3))))
+							.addPreferredGap(ComponentPlacement.RELATED, 47, Short.MAX_VALUE)
+							.addGroup(gl_contentPane.createParallelGroup(Alignment.TRAILING, false)
+								.addGroup(gl_contentPane.createSequentialGroup()
+									.addComponent(blowed)
+									.addGap(18)
+									.addComponent(lbw)
+									.addPreferredGap(ComponentPlacement.RELATED))
+								.addGroup(gl_contentPane.createSequentialGroup()
+									.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
+										.addComponent(t2player3)
+										.addComponent(t2p3s))
+									.addGap(27)))
+							.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
+								.addComponent(runout)
+								.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
+									.addComponent(t2player4)
+									.addComponent(t2p4s)))
+							.addGap(12)
+							.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
+								.addComponent(t2player5)
+								.addComponent(t2p5s))
+							.addGap(38)))
 					.addPreferredGap(ComponentPlacement.RELATED)
-					.addGroup(gl_contentPane.createParallelGroup(Alignment.TRAILING, false)
-						.addComponent(lblNewLabel_25, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-						.addComponent(lblTeam_2, GroupLayout.DEFAULT_SIZE, 38, Short.MAX_VALUE))
-					.addGap(172))
+					.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
+						.addComponent(teamscore2)
+						.addComponent(lblNewLabel))
+					.addGap(223))
+				.addGroup(Alignment.TRAILING, gl_contentPane.createSequentialGroup()
+					.addGap(325)
+					.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
+						.addComponent(teamscore1, GroupLayout.DEFAULT_SIZE, 38, Short.MAX_VALUE)
+						.addComponent(teamscore))
+					.addGap(197))
 		);
 		contentPane.setLayout(gl_contentPane);
 	}
@@ -492,5 +442,6 @@ public class MainScore extends JFrame{
 		System.out.println(s);
 		text[0] = s;
 		System.out.println(text[0]);
+		lblNewLabel_12.setText(text[10]);
 	}
 }

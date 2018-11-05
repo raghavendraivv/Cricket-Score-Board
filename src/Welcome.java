@@ -1,14 +1,18 @@
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.GroupLayout;
 import javax.swing.GroupLayout.Alignment;
+import javax.swing.JLabel;
+import java.awt.Color;
 import javax.swing.JButton;
 
-public class Selectovers extends JFrame {
+public class Welcome extends JFrame {
 
 	private JPanel contentPane;
 
@@ -19,7 +23,7 @@ public class Selectovers extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					Selectovers frame = new Selectovers();
+					Welcome frame = new Welcome();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -31,39 +35,47 @@ public class Selectovers extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public Selectovers() {
+	public Welcome() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
 		contentPane = new JPanel();
+		contentPane.setBackground(Color.DARK_GRAY);
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		
-		JButton btnOvers = new JButton("2 Overs");
+		JLabel lblHiWelcomeTo = new JLabel("Hi, Welcome to Cricket score board Application");
+		lblHiWelcomeTo.setForeground(Color.WHITE);
 		
-		JButton btnOvers_1 = new JButton("5 Overs");
-		
-		JButton btnOvers_2 = new JButton("10 Overs");
+		JButton btnEnterToThe = new JButton("Enter to the Match\\");
+		btnEnterToThe.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent ae) {
+			    Inputplayers mn= new Inputplayers();
+				dispose();
+				mn.setVisible(true);
+				
+			}
+		});
 		GroupLayout gl_contentPane = new GroupLayout(contentPane);
 		gl_contentPane.setHorizontalGroup(
 			gl_contentPane.createParallelGroup(Alignment.LEADING)
 				.addGroup(gl_contentPane.createSequentialGroup()
-					.addGap(144)
 					.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
-						.addComponent(btnOvers_2)
-						.addComponent(btnOvers_1)
-						.addComponent(btnOvers))
-					.addContainerGap(169, Short.MAX_VALUE))
+						.addGroup(gl_contentPane.createSequentialGroup()
+							.addGap(50)
+							.addComponent(lblHiWelcomeTo))
+						.addGroup(gl_contentPane.createSequentialGroup()
+							.addGap(122)
+							.addComponent(btnEnterToThe)))
+					.addContainerGap(49, Short.MAX_VALUE))
 		);
 		gl_contentPane.setVerticalGroup(
 			gl_contentPane.createParallelGroup(Alignment.LEADING)
 				.addGroup(gl_contentPane.createSequentialGroup()
-					.addGap(23)
-					.addComponent(btnOvers)
-					.addGap(28)
-					.addComponent(btnOvers_1)
-					.addGap(29)
-					.addComponent(btnOvers_2)
-					.addContainerGap(105, Short.MAX_VALUE))
+					.addGap(27)
+					.addComponent(lblHiWelcomeTo)
+					.addGap(80)
+					.addComponent(btnEnterToThe)
+					.addContainerGap(113, Short.MAX_VALUE))
 		);
 		contentPane.setLayout(gl_contentPane);
 	}
