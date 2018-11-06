@@ -1,5 +1,7 @@
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
+import java.awt.Image;
+import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -74,10 +76,18 @@ public class Selectplayers extends JFrame {
 			public void actionPerformed(ActionEvent ae) {
 				MainScore mn= new MainScore();
 				dispose();
+				mn.indscore=mn.t1p1;
 				mn.setVisible(true);
+				
 				
 			}
 		});
+		Toolkit t=Toolkit.getDefaultToolkit();  
+        Image i=t.getImage("Toolkit t=Toolkit.getDefaultToolkit();  \n" + 
+        		"        Image i=t.getImage(\"p3.gif\");  \n" + 
+        		"        g.drawImage(i, 120,100,this);  \n" + 
+        		"");  
+
 		
 		JLabel lblTeamPlease = new JLabel("Team 1 please choose");
 		

@@ -1,4 +1,4 @@
-import java.awt.BorderLayout;
+
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
@@ -16,8 +16,7 @@ import javax.swing.JLabel;
 public class Inputplayers extends JFrame {
 
 	private JPanel contentPane;
-	public JTextField textField;
-	private JTextField textField_1;
+	JTextField textField_1;
 	private JTextField textField_2;
 	private JTextField textField_3;
 	private JTextField textField_4;
@@ -49,16 +48,17 @@ public class Inputplayers extends JFrame {
 	String[] txt = new String[20];
 	private JLabel lblTeam;
 	private JLabel lblTeam_1;
+	private JTextField textField_5;
 	public Inputplayers() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 500, 450);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
-		
-		textField = new JTextField("Player 1");
-		textField.setColumns(10);
-		txt[0] = textField.getText().toString();
+		textField_5 = new JTextField();
+		textField_5.setColumns(10);
+		contentPane.getInputContext();
+		String sd = textField_5.getText().toString();
 		
 		textField_1 = new JTextField("Player 2");
 		textField_1.setColumns(10);
@@ -78,7 +78,7 @@ public class Inputplayers extends JFrame {
 		
 		
 		
-		textField_11 = new JTextField("Player 1");
+		textField_11 = new JTextField();
 		textField_11.setColumns(10);
 		txt[11] = textField_11.getText().toString();
 		
@@ -103,8 +103,10 @@ public class Inputplayers extends JFrame {
 			public void actionPerformed(ActionEvent ae) {
 				String s= textField_14.getText().toString();
 				System.out.println(s);
-			    Selectplayers mn= new Selectplayers();
+			    MainScore mn= new MainScore();
 				dispose();
+				mn.t1player1.setText(sd);
+				mn.indscore=mn.t1p1;
 				mn.setVisible(true);
 				
 			}
@@ -113,18 +115,21 @@ public class Inputplayers extends JFrame {
 		lblTeam = new JLabel("Team 1");
 		
 		lblTeam_1 = new JLabel("Team 2");
+		
 		GroupLayout gl_contentPane = new GroupLayout(contentPane);
 		gl_contentPane.setHorizontalGroup(
 			gl_contentPane.createParallelGroup(Alignment.LEADING)
 				.addGroup(gl_contentPane.createSequentialGroup()
 					.addGap(12)
 					.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
-						.addComponent(textField, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+						.addGroup(gl_contentPane.createSequentialGroup()
+							.addPreferredGap(ComponentPlacement.RELATED)
+							.addComponent(textField_5, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
 						.addComponent(textField_1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
 						.addComponent(textField_4, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
 						.addComponent(textField_2, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
 						.addComponent(textField_3, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
-					.addPreferredGap(ComponentPlacement.RELATED, 98, Short.MAX_VALUE)
+					.addPreferredGap(ComponentPlacement.RELATED, 154, Short.MAX_VALUE)
 					.addGroup(gl_contentPane.createParallelGroup(Alignment.TRAILING)
 						.addComponent(textField_11, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
 						.addComponent(textField_15, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
@@ -139,7 +144,7 @@ public class Inputplayers extends JFrame {
 				.addGroup(gl_contentPane.createSequentialGroup()
 					.addGap(30)
 					.addComponent(lblTeam)
-					.addPreferredGap(ComponentPlacement.RELATED, 213, Short.MAX_VALUE)
+					.addPreferredGap(ComponentPlacement.RELATED, 233, Short.MAX_VALUE)
 					.addComponent(lblTeam_1)
 					.addGap(127))
 		);
@@ -148,8 +153,8 @@ public class Inputplayers extends JFrame {
 				.addGroup(gl_contentPane.createSequentialGroup()
 					.addGap(12)
 					.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
-						.addComponent(textField, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-						.addComponent(textField_15, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+						.addComponent(textField_15, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+						.addComponent(textField_5, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
 					.addGap(6)
 					.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
 						.addComponent(textField_1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)

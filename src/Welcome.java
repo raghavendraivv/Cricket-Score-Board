@@ -14,6 +14,10 @@ import javax.swing.JButton;
 
 public class Welcome extends JFrame {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
 
 	/**
@@ -43,7 +47,7 @@ public class Welcome extends JFrame {
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		
-		JLabel lblHiWelcomeTo = new JLabel("Hi, Welcome to Cricket score board Application");
+		JLabel lblHiWelcomeTo = new JLabel("Hi, Welcome to 2 overs Cricket score board Application");
 		lblHiWelcomeTo.setForeground(Color.WHITE);
 		
 		JButton btnEnterToThe = new JButton("Enter to the Match\\");
@@ -55,29 +59,35 @@ public class Welcome extends JFrame {
 				
 			}
 		});
+		
+		JLabel label = new JLabel("");
 		GroupLayout gl_contentPane = new GroupLayout(contentPane);
 		gl_contentPane.setHorizontalGroup(
 			gl_contentPane.createParallelGroup(Alignment.LEADING)
 				.addGroup(gl_contentPane.createSequentialGroup()
 					.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
 						.addGroup(gl_contentPane.createSequentialGroup()
-							.addGap(50)
-							.addComponent(lblHiWelcomeTo))
-						.addGroup(gl_contentPane.createSequentialGroup()
 							.addGap(122)
-							.addComponent(btnEnterToThe)))
-					.addContainerGap(49, Short.MAX_VALUE))
+							.addComponent(btnEnterToThe))
+						.addGroup(gl_contentPane.createSequentialGroup()
+							.addGap(172)
+							.addComponent(label))
+						.addGroup(gl_contentPane.createSequentialGroup()
+							.addContainerGap()
+							.addComponent(lblHiWelcomeTo)))
+					.addContainerGap(38, Short.MAX_VALUE))
 		);
 		gl_contentPane.setVerticalGroup(
 			gl_contentPane.createParallelGroup(Alignment.LEADING)
 				.addGroup(gl_contentPane.createSequentialGroup()
-					.addGap(27)
+					.addContainerGap()
 					.addComponent(lblHiWelcomeTo)
-					.addGap(80)
+					.addGap(33)
+					.addComponent(label)
+					.addGap(47)
 					.addComponent(btnEnterToThe)
 					.addContainerGap(113, Short.MAX_VALUE))
 		);
 		contentPane.setLayout(gl_contentPane);
 	}
-
 }
