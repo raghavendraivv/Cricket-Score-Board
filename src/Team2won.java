@@ -7,6 +7,7 @@ import javax.swing.border.EmptyBorder;
 import javax.swing.GroupLayout;
 import javax.swing.GroupLayout.Alignment;
 import javax.swing.JLabel;
+import java.awt.Font;
 
 public class Team2won extends JFrame {
 
@@ -39,20 +40,21 @@ public class Team2won extends JFrame {
 		setContentPane(contentPane);
 		
 		JLabel lblCongratulationsTeam = new JLabel("Congratulations Team 2 Won");
+		lblCongratulationsTeam.setFont(new Font("FreeSans", Font.BOLD | Font.ITALIC, 24));
 		GroupLayout gl_contentPane = new GroupLayout(contentPane);
 		gl_contentPane.setHorizontalGroup(
 			gl_contentPane.createParallelGroup(Alignment.LEADING)
 				.addGroup(gl_contentPane.createSequentialGroup()
-					.addGap(130)
+					.addGap(38)
 					.addComponent(lblCongratulationsTeam)
-					.addContainerGap(230, Short.MAX_VALUE))
+					.addContainerGap(92, Short.MAX_VALUE))
 		);
 		gl_contentPane.setVerticalGroup(
 			gl_contentPane.createParallelGroup(Alignment.LEADING)
 				.addGroup(gl_contentPane.createSequentialGroup()
-					.addGap(91)
+					.addGap(89)
 					.addComponent(lblCongratulationsTeam)
-					.addContainerGap(154, Short.MAX_VALUE))
+					.addContainerGap(142, Short.MAX_VALUE))
 		);
 		contentPane.setLayout(gl_contentPane);
 	}

@@ -39,6 +39,7 @@ public class MainScore extends JFrame{
 	private JLabel t1p2;
 	JLabel t1p1;
 	JLabel indscore=new JLabel();
+	private JButton extra;
 	/**
 	 * Launch the application.
 	 */
@@ -71,24 +72,24 @@ public class MainScore extends JFrame{
 		
 //		set s = new set();
 		
-		t1player1 = new JLabel("New label");
+		t1player1 = new JLabel("Ganguly");
 		//System.out.println(s);
 		//lblNewLabel.setText();
 		
 		
-		t1player2 = new JLabel("New label");
+		t1player2 = new JLabel("Dhoni");
 //		lblNewLabel_1.setText(text[1]);
 		
-		t1player3 = new JLabel("New label");
+		t1player3 = new JLabel("kohili");
 //		lblNewLabel_2.setText(text[2]);
 		
-		JLabel lblNewLabel_3 = new JLabel("New label");
+		JLabel lblNewLabel_3 = new JLabel("");
 		lblNewLabel_3.setText(text[3]);
 		
-		t1player4 = new JLabel("New label");
-		t1player4.setText(text[4]);
+		t1player4 = new JLabel("Rohit");
+//		t1player4.setText(text[4]);
 		
-		t1player5 = new JLabel("New label");
+		t1player5 = new JLabel("Sachin");
 //		lblNewLabel_19.setText(text[19]);
 		System.out.println(text[19]);
 
@@ -152,8 +153,6 @@ public class MainScore extends JFrame{
 		
 		JButton runs0 = new JButton("0");
 		
-		JRadioButton extra = new JRadioButton("Extra");
-		
 		JLabel lblTeam = new JLabel("Team 1");
 		
 		JButton out = new JButton("Out");
@@ -181,7 +180,6 @@ public class MainScore extends JFrame{
 				{
 					Team2 mn= new Team2();
 					dispose();
-//					mn.t1player1.setText(sd);
 					mn.indscore=mn.t2p1;
 					mn.score2=score1;
 					mn.setVisible(true);
@@ -199,6 +197,7 @@ public class MainScore extends JFrame{
 					}
 					else if(score1==mn.score1)
 					{
+						System.out.println(score1+" "+mn.score1);
 						DrawMatch mno= new DrawMatch();
 						dispose();
 						mno.setVisible(true);
@@ -207,15 +206,15 @@ public class MainScore extends JFrame{
 			}
 		});
 		
-		t1p1 = new JLabel("New label");
+		t1p1 = new JLabel("0");
 		
-		t1p2 = new JLabel("New label");
+		t1p2 = new JLabel("0");
 		
-		t1p3 = new JLabel("New label");
+		t1p3 = new JLabel("0");
 		
-		t1p4 = new JLabel("New label");
+		t1p4 = new JLabel("0");
 		
-		t1p5 = new JLabel("New label");
+		t1p5 = new JLabel("0");
 		
 		teamscore1 = new JLabel("Team Score ");
 		teamscore1.setFont(new Font("DejaVu Sans Condensed", Font.ITALIC, 14));
@@ -223,6 +222,14 @@ public class MainScore extends JFrame{
 		teamscore1.setForeground(Color.BLUE);
 		
 		teamscore = new JLabel("New label");
+		
+		extra = new JButton("Extra");
+		extra.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				score1+=Integer.parseUnsignedInt(runs1.getLabel().toString());
+				teamscore.setText(String.valueOf(score1));
+			}
+		});
 		GroupLayout gl_contentPane = new GroupLayout(contentPane);
 		gl_contentPane.setHorizontalGroup(
 			gl_contentPane.createParallelGroup(Alignment.LEADING)
@@ -258,13 +265,10 @@ public class MainScore extends JFrame{
 								.addComponent(t1p1, GroupLayout.PREFERRED_SIZE, 27, GroupLayout.PREFERRED_SIZE))))
 					.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
 						.addGroup(gl_contentPane.createSequentialGroup()
-							.addGap(46)
+							.addGap(141)
 							.addGroup(gl_contentPane.createParallelGroup(Alignment.TRAILING)
 								.addComponent(runs0)
-								.addGroup(gl_contentPane.createSequentialGroup()
-									.addComponent(extra)
-									.addGap(34)
-									.addComponent(runs3)))
+								.addComponent(runs3))
 							.addGap(12)
 							.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
 								.addGroup(gl_contentPane.createSequentialGroup()
@@ -276,15 +280,17 @@ public class MainScore extends JFrame{
 									.addPreferredGap(ComponentPlacement.UNRELATED)
 									.addComponent(runs6))))
 						.addGroup(gl_contentPane.createSequentialGroup()
-							.addGap(210)
+							.addGap(56)
+							.addComponent(extra)
+							.addGap(37)
 							.addComponent(out)))
-					.addContainerGap(639, Short.MAX_VALUE))
+					.addContainerGap(152, Short.MAX_VALUE))
 				.addGroup(gl_contentPane.createSequentialGroup()
 					.addGap(21)
 					.addComponent(teamscore1, GroupLayout.PREFERRED_SIZE, 96, GroupLayout.PREFERRED_SIZE)
 					.addGap(18)
 					.addComponent(teamscore)
-					.addContainerGap(885, Short.MAX_VALUE))
+					.addContainerGap(385, Short.MAX_VALUE))
 		);
 		gl_contentPane.setVerticalGroup(
 			gl_contentPane.createParallelGroup(Alignment.TRAILING)
@@ -304,8 +310,7 @@ public class MainScore extends JFrame{
 							.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
 								.addGroup(gl_contentPane.createSequentialGroup()
 									.addGap(24)
-									.addComponent(t1p2, GroupLayout.PREFERRED_SIZE, 19, GroupLayout.PREFERRED_SIZE)
-									.addGap(7))
+									.addComponent(t1p2, GroupLayout.PREFERRED_SIZE, 19, GroupLayout.PREFERRED_SIZE))
 								.addGroup(gl_contentPane.createSequentialGroup()
 									.addGap(4)
 									.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
@@ -330,18 +335,18 @@ public class MainScore extends JFrame{
 							.addGap(38)
 							.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
 								.addComponent(t1player5)
-								.addComponent(t1p5))
-							.addGap(62))
+								.addComponent(t1p5)))
 						.addGroup(gl_contentPane.createSequentialGroup()
 							.addGap(58)
 							.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
 								.addComponent(runs4)
 								.addComponent(runs6)
-								.addComponent(runs3)
-								.addComponent(extra))
+								.addComponent(runs3))
 							.addGap(52)
-							.addComponent(out)))
-					.addGap(238))
+							.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
+								.addComponent(out)
+								.addComponent(extra))))
+					.addGap(300))
 				.addGroup(gl_contentPane.createSequentialGroup()
 					.addGap(325)
 					.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)

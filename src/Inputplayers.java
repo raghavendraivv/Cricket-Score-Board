@@ -15,6 +15,10 @@ import javax.swing.JLabel;
 
 public class Inputplayers extends JFrame {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
 	JTextField textField_1;
 	private JTextField textField_2;
@@ -55,46 +59,46 @@ public class Inputplayers extends JFrame {
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
-		textField_5 = new JTextField();
+		textField_5 = new JTextField("Ganguly");
 		textField_5.setColumns(10);
 		contentPane.getInputContext();
 		String sd = textField_5.getText().toString();
 		
-		textField_1 = new JTextField("Player 2");
+		textField_1 = new JTextField("Dhoni");
 		textField_1.setColumns(10);
 		txt[1] = textField_1.getText().toString();
 		
-		textField_2 = new JTextField("Player 3");
+		textField_2 = new JTextField("kohili");
 		textField_2.setColumns(10);
 		txt[2] = textField_2.getText().toString();
 		
-		textField_3 = new JTextField("Player 4");
+		textField_3 = new JTextField("Rohit");
 		textField_3.setColumns(10);
 		txt[3] = textField_3.getText().toString();
 		
-		textField_4 = new JTextField("Player 5");
+		textField_4 = new JTextField("Sachin");
 		textField_4.setColumns(10);
 		txt[4] = textField_4.getText().toString();
 		
 		
 		
-		textField_11 = new JTextField();
+		textField_11 = new JTextField("Pointing");
 		textField_11.setColumns(10);
 		txt[11] = textField_11.getText().toString();
 		
-		textField_12 = new JTextField("Player 2");
+		textField_12 = new JTextField("Warner");
 		textField_12.setColumns(10);
 		txt[12] = textField_12.getText().toString();
 		
-		textField_13 = new JTextField("Player 3");
+		textField_13 = new JTextField("Smith");
 		textField_13.setColumns(10);
 		txt[13] = textField_13.getText().toString();
 		
-		textField_14 = new JTextField("Player 4");
+		textField_14 = new JTextField("Finch");
 		textField_14.setColumns(10);
 		txt[14] = textField_14.getText().toString();
 		
-		textField_15 = new JTextField("Player 5");
+		textField_15 = new JTextField("Lee");
 		textField_15.setColumns(10);
 		txt[15] = textField_15.getText().toString();
 		

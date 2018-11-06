@@ -47,10 +47,10 @@ public class Welcome extends JFrame {
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		
-		JLabel lblHiWelcomeTo = new JLabel("Hi, Welcome to 2 overs Cricket score board Application");
+		JLabel lblHiWelcomeTo = new JLabel("Hi, Welcome to test Cricket score board Application");
 		lblHiWelcomeTo.setForeground(Color.WHITE);
 		
-		JButton btnEnterToThe = new JButton("Enter to the Match\\");
+		JButton btnEnterToThe = new JButton("Enter to the Match");
 		btnEnterToThe.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent ae) {
 			    Inputplayers mn= new Inputplayers();
