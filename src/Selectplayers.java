@@ -46,6 +46,12 @@ public class Selectplayers extends JFrame {
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		
+// 		nds(100, 100, 450, 300);
+// 		contentPane = new JPanel();
+// 		contentPane.setBackground(Color.GRAY);
+// 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+// 		setContentPane(contentPane);
+		
 		JButton btnPlayers = new JButton("Heads");
 		btnPlayers.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent ae) {
