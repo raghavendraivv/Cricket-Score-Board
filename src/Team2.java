@@ -69,16 +69,16 @@ public class Team2 extends JFrame {
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		
-		t2player1 = new JLabel("Pointing");
+		t2player1 = new JLabel("Ricky pointing");
 		
-		t2player2 = new JLabel("warner");
+		t2player2 = new JLabel("David warner");
 		
-		t2player3 = new JLabel("smith");
+		t2player3 = new JLabel("steven smith");
 		
-		t2player4 = new JLabel("Finch");
+		t2player4 = new JLabel("Aaron Finch");
 		
 		
-		t2player5 = new JLabel("Lee");
+		t2player5 = new JLabel("Brett Lee");
 		t2p1 = new JLabel("0");
 		
 		t2p2 = new JLabel("0");
