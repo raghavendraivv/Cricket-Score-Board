@@ -209,16 +209,16 @@ public class Team2 extends JFrame {
 				{
 					if(score1>score2)
 					{
-						Team1won m= new Team1won();
+						Team1won main= new Team1won();
 						dispose();
-						m.setVisible(true);
+						main.setVisible(true);
 					}
 					else  if(score1==score2)
 					{
 						System.out.println(score1+" "+score1);
-						DrawMatch mno= new DrawMatch();
+						DrawMatch mnos= new DrawMatch();
 						dispose();
-						mno.setVisible(true);
+						mnos.setVisible(true);
 					}
 				}
 			}
