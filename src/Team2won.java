@@ -12,10 +12,6 @@ import java.awt.Font;
 public class Team2won extends JFrame {
 
 	private JPanel contentPane;
-
-	/**
-	 * Launch the application.
-	 */
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
@@ -28,10 +24,6 @@ public class Team2won extends JFrame {
 			}
 		});
 	}
-
-	/**
-	 * Create the frame.
-	 */
 	public Team2won() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
@@ -39,7 +31,7 @@ public class Team2won extends JFrame {
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		
-		JLabel lblCongratulationsTeam = new JLabel("Congratulations Team 2 Won");
+		JLabel lblCongratulationsTeam = new JLabel("Congratulations Team 2 Won the match");
 		lblCongratulationsTeam.setFont(new Font("FreeSans", Font.BOLD | Font.ITALIC, 24));
 		GroupLayout gl_contentPane = new GroupLayout(contentPane);
 		gl_contentPane.setHorizontalGroup(
